@@ -1,0 +1,32 @@
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advice Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card" aria-live="polite">
+      <p class="advice-id">ADVICE <span id="advice-number">#117</span></p>
+
+      <blockquote class="quote" id="advice-text">
+        “It is easy to sit up and take notice, what’s difficult is getting up and taking action.”
+      </blockquote>
+
+      <div class="divider" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 480px)" srcset="images/pattern-divider-mobile.svg" />
+          <img src="images/pattern-divider-desktop.svg" alt="" />
+        </picture>
+      </div>
+
+      <button class="dice-button" type="button" aria-label="Generate a new advice">
+        <img src="images/icon-dice.svg" alt="" aria-hidden="true" />
+      </button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

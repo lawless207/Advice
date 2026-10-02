@@ -1,0 +1,136 @@
+:root {
+  --bg: #1f2b39;
+  --card: #3b4a57;
+  --card-shadow: rgba(0, 0, 0, 0.25);
+  --text: #edf5f8;
+  --green: #53f8b2;
+  --green-strong: #2bd29d;
+  --muted: #c5d0d9;
+  --divider: #4f5d74;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+}
+
+.card {
+  position: relative;
+  width: min(90vw, 540px);
+  min-height: 332px;
+  padding: 42px 52px 72px;
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 26px 32px var(--card-shadow);
+}
+
+.advice-id {
+  margin: 0 0 28px;
+  text-align: center;
+  color: var(--green);
+  font-size: 0.78rem;
+  letter-spacing: 0.34rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.quote {
+  margin: 0;
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(1.9rem, 2vw, 2.3rem);
+  line-height: 1.2;
+  letter-spacing: -0.06em;
+  color: var(--text);
+}
+
+.divider {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+.divider img {
+  display: block;
+  width: min(100%, 444px);
+  height: auto;
+}
+
+.dice-button {
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  transform: translateX(-50%);
+  width: 66px;
+  height: 66px;
+  border: none;
+  border-radius: 50%;
+  background: var(--green);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 30px rgba(83, 248, 178, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+
+.dice-button:hover {
+  transform: translateX(-50%) scale(1.04);
+  box-shadow: 0 0 38px rgba(83, 248, 178, 0.9);
+}
+
+.dice-button:active {
+  transform: translateX(-50%) scale(0.96);
+}
+
+.dice-button:disabled {
+  cursor: wait;
+  filter: grayscale(0.2);
+}
+
+.dice-button img {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: min(90vw, 343px);
+    min-height: 315px;
+    padding: 32px 24px 66px;
+    border-radius: 12px;
+  }
+
+  .advice-id {
+    margin-bottom: 18px;
+    font-size: 0.7rem;
+    letter-spacing: 0.25rem;
+  }
+
+  .quote {
+    font-size: clamp(1.7rem, 7vw, 2.1rem);
+    line-height: 1.25;
+  }
+
+  .divider {
+    margin-top: 18px;
+  }
+
+  .dice-button {
+    bottom: -30px;
+    width: 62px;
+    height: 62px;
+  }
+}
